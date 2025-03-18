@@ -11,6 +11,6 @@ router.post("/auth/login", loginUser);
 router.post("/expenses", auth, addExpense);  //  Requires authentication
 router.get("/expenses", getExpenses);       
 router.get("/expenses/:id", getExpenseById); 
-router.delete("/expenses/:id", auth, deleteExpense); 
+router.delete("/expenses/:id", auth, deleteExpense); // requiries authentication
 
 export default router;

@@ -62,7 +62,7 @@ export const loginUser = async (req, res) => {
         errors: error.details.map((err) => err.message),
       });
     }
-    const { email, password } = value;
+    const { email, password } = value; // deconstuct the value
     const user = await User.findOne({ email });
 
     if (!user || !(await bcrypt.compare(password, user.password))) {  // Validate user and password by comparing
